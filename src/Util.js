@@ -6,11 +6,6 @@ Util = {};
  * @returns {number}
  */
 Util.factorial = function(n) {
-    if (1 === n) {
-        return 1;
-    }
-
-    return n * Util.factorial(n - 1);
 };
 
 /**
