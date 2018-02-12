@@ -83,7 +83,14 @@ Util.isPrime = function(n) {
  * @returns {number}
  */
 Util.sumPrime = function(n) {
-
+    var x = 0;
+        if (n < 2)
+            return -9999;
+        for (var i = 2; i < n; ++i) {
+            if(Util.isPrime(i))
+                x += i;
+        }
+    return x;
 };
 
 /**
