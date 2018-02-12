@@ -3,7 +3,6 @@ Interval = function(start, end) {
     this.end = end
 };
 
-
 Interval.prototype.toString = function () {
     return "[" + this.start + "," + this.end + "]";
 };
@@ -48,7 +47,7 @@ Interval.prototype.union = function (interval) {
  * @returns {Interval|null}
  */
 Interval.prototype.intersection = function (interval) {
-
+	
 };
 
 

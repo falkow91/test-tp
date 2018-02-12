@@ -16,13 +16,13 @@ describe("Interval - overlapping", function () {
     [
         new Interval(8, 9),
         new Interval(21, 22)
+
     ].forEach(function (interval) {
         it("should not overlaps " + testedInterval.toString() + " and " + interval.toString(), function () {
             expect(testedInterval.overlaps(interval)).toBeFalsy();
         });
     });
 });
-
 
 
 
@@ -51,4 +51,3 @@ describe("Interval - including", function () {
         });
     });
 });
-
