@@ -107,3 +107,35 @@ describe("Util - Combination", function() {
         })
     })
 });
+
+describe("IsPrime", function(){
+    var testCases = [
+        {
+            n : 0,
+            isPrime : false
+        },
+        {
+            n : 1,
+            isPrime : false
+        },
+        {
+            n : 2,
+            isPrime : true
+        },
+        {
+            n : 4,
+            isPrime : false
+        },
+        {
+            n : 3,
+            isPrime : true
+        }
+    ];
+
+    testCases.forEach(function(testCase) {
+        it("should returns " + testCase.isPrime + " when n = " + testCase.n, function() {
+            var result = Util.isPrime(testCase.n, testCase.r);
+            expect(result).toEqual(testCase.isPrime);
+        })
+    })
+});
