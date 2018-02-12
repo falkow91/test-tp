@@ -108,6 +108,8 @@ describe("Util - Combination", function() {
     })
 });
 
+
+
 describe("IsPrime", function(){
     var testCases = [
         {
@@ -134,8 +136,43 @@ describe("IsPrime", function(){
 
     testCases.forEach(function(testCase) {
         it("should returns " + testCase.isPrime + " when n = " + testCase.n, function() {
-            var result = Util.isPrime(testCase.n, testCase.r);
+            var result = Util.isPrime(testCase.n);
             expect(result).toEqual(testCase.isPrime);
+        })
+    })
+});
+
+
+
+
+describe("SumPrime", function(){
+    var testCases = [
+        {
+            n : 1,
+            sumPrime : -9999
+        },
+        {
+            n : 2,
+            sumPrime : 0
+        },
+        {
+            n : 9,
+            sumPrime : 17
+        },
+        {
+            n : 28,
+            sumPrime : 41
+        },
+        {
+            n : 50,
+            sumPrime : 328
+        }
+    ];
+    
+    testCases.forEach(function(testCase) {
+        it("should returns " + testCase.sumPrime + " when n = " + testCase.n, function() {
+            var result = Util.sumPrime(testCase.n);
+            expect(result).toEqual(testCase.sumPrime);
         })
     })
 });
