@@ -185,3 +185,25 @@ describe("FizzBuzz", function(){
         var result = Util.fizzBuzz(17);
         expect(result).toEqual(tab);
     });
+
+
+
+describe("Cipher", function(){
+    var testCases = [
+        {
+            phrase : "Salut ca va ?",
+            cipher : "Tbmvu!db!wb!@"
+        },
+        {
+            phrase : "Allez l'OM !",
+            cipher : "Bmmf{!m(PN!\""
+        },
+    ];
+    
+    testCases.forEach(function(testCase) {
+        it("should returns " + testCase.cipher + " when phrase = " + testCase.phrase, function() {
+            var result = Util.cipher(testCase.phrase);
+            expect(result).toEqual(testCase.cipher);
+        })
+    })
+});
