@@ -1,4 +1,4 @@
-describe("Factorial", function(){
+/*describe("Factorial", function() {
     var testCases = [
         {
             n : 0,
@@ -19,35 +19,49 @@ describe("Factorial", function(){
         {
             n : 4,
             factorial : 24
-        }
+        },     
     ];
-
-    testCases.forEach(function(testCase){
-        it("should returns " + testCase.factorial + " when n = " + testCase.n, function(){
+   
+    testCases.forEach(function(testCase) {
+        it("should returns " + testCase.factorial + " when n = " + testCase.n, function() {
             var result = Util.factorial(testCase.n);
             expect(result).toEqual(testCase.factorial);
         })
-    });
-
-
-    it("should raise an exception when n < 0", function(){
-        var f = function(){
-            Util.factorial(-1);
-        }
-        expect(f).toThrow('Unable to compute factorial for n < 0');
-    });
-
-    it("should raise an exception when n is not an integer", function(){
-        var f = function(){
-            Util.factorial('test');
-        }
-        expect(f).toThrow('Unable to compute factorial of non integer values');
-    })
-
-    it("should raise an exception for n > 100", function(){
-        var f = function(){
-            Util.factorial(101);
-        }
-        expect(f).toThrow('Unable to compute factorial for n > 100');
     })
 });
+describe("Arrangement", function() {
+    var testCases = [
+        {
+            r : 0,
+            n : 0,
+            arrangement : -1
+        },
+        {
+            r : 0,
+            n : 1,
+            arrangement : 1
+        },
+        {
+            r : 1,
+            n : 2,
+            arrangement : 2
+        },
+        {
+            r : 2,
+            n : 4,
+            arrangement : 12
+        },
+        {
+            r : 3,
+            n : 4,
+            arrangement : 24
+        }
+    ];
+   
+    testCases.forEach(function(testCase) {
+        it("should returns " + testCase.arrangement + " when n = " + testCase.n + " and r = " + testCase.r, function() {
+            var result = Util.arrangement(testCase.n, testCase.r);
+            expect(result).toEqual(testCase.arrangement);
+        })
+    })
+});*/
