@@ -47,7 +47,15 @@ Interval.prototype.union = function (interval) {
  * @returns {Interval|null}
  */
 Interval.prototype.intersection = function (interval) {
+	if (interval.end < this.start || this.end < interval.start) {
+		return null;
+	}
 	
+	var start, end;
+	start = this.start < interval.start ? interval.start : this.start;
+	end = this.end > interval.end ? interval.end : this.end;
+	
+	return new Interval(start, end);
 };
 
 
