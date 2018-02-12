@@ -176,3 +176,12 @@ describe("SumPrime", function(){
         })
     })
 });
+
+
+
+describe("FizzBuzz", function(){
+    var tab = [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, "Buzz", "Buzz", 16, "FizzBuzz"];
+    it("should returns " + tab + " when n = 17", function() {
+        var result = Util.fizzBuzz(17);
+        expect(result).toEqual(tab);
+    });

@@ -106,7 +106,24 @@ Util.sumPrime = function(n) {
  * @returns {array}
  */
 Util.fizzBuzz = function(n) {
+    var x, fizz, buzz, tab;
+    tab = [];
 
+    for (var i = 1; i < n+1 ; ++i) {
+        x = "", fizz = false, buzz = false;
+        if (i%3 === 0)
+            fizz = true;
+        if (i%5 === 0)
+            buzz = true;
+        if (fizz)
+            x = "Fizz";
+        if (buzz)
+            x += "Buzz";
+        if (!fizz && !buzz)
+            x = i;
+        tab.push(x);
+    }
+    return tab;
 };
 
 /**
