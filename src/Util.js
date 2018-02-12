@@ -26,6 +26,7 @@ Util.factorial = function(n) {
     return n * Util.factorial(n - 1);
 };
 
+
 /**
  * Calcule la disposition ordonnée de r éléments dans un ensemble de n elements.
  * Formule: Util.arrangement(n, r) = n! / (n - r)!
@@ -37,6 +38,7 @@ Util.arrangement = function(n, r) {
     if (n - r === 0)
         return -9999;
 };
+
 
 /**
  * Calcule la disposition non ordonnée de r éléments dans un ensemble de n elements.
@@ -51,6 +53,7 @@ Util.combination = function(n, r) {
        return -9999;
     return Util.factorial(n) / dividende;
 };
+
 
 /**
  * Détermine si n est un nombre premier.
@@ -93,6 +96,7 @@ Util.sumPrime = function(n) {
     return x;
 };
 
+
 /**
  * Cette méthode doit retourner un tableau de 1 à n tel que:
  * - Pour les nombres multiples de 3, les remplacer par "Fizz"
@@ -126,6 +130,7 @@ Util.fizzBuzz = function(n) {
     return tab;
 };
 
+
 /**
  * Chiffre une phrase selon la règle suivante : Les A deviennent des B, les B des C, etc.
  *
@@ -136,5 +141,8 @@ Util.fizzBuzz = function(n) {
  * @returns {string}
  */
 Util.cipher = function (phrase) {
-
+var x = "";
+    for (var i = 0; i < phrase.length; ++i)
+        x += String.fromCharCode(phrase.charCodeAt(i)+1);
+    return x;
 };
